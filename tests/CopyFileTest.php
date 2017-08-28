@@ -1,6 +1,6 @@
 <?php
 
-use SlowProg\CopyFile\ScriptHandler;
+use GMdotnet\CopyFile\ScriptHandler;
 
 use org\bovigo\vfs\vfsStream;
 use Composer\IO\IOInterface;
@@ -18,6 +18,7 @@ class CopyFileTest extends PHPUnit_Framework_TestCase
 
         $this->assertTrue($root->hasChild('from/file1'));
         $this->assertTrue($root->hasChild('from/file2'));
+        $this->assertTrue($root->hasChild('from/.filehidden'));
 
         $this->assertTrue($root->hasChild('file3'));
 
@@ -38,6 +39,7 @@ class CopyFileTest extends PHPUnit_Framework_TestCase
 
         $this->assertTrue($root->hasChild('to/file1'));
         $this->assertTrue($root->hasChild('to/file2'));
+        $this->assertTrue($root->hasChild('to/.filehidden'));
     }
 
     public function testCopyDirToNotExistsDir()
@@ -201,6 +203,7 @@ class CopyFileTest extends PHPUnit_Framework_TestCase
             'from' => [
                 'file1' => 'Some content',
                 'file2' => 'Some content',
+                '.filehidden' => 'Some content',
             ],
             'to' => [],
             'file3' => 'Some content',
