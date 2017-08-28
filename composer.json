@@ -1,13 +1,17 @@
 {
-    "name": "slowprog/composer-copy-file",
-    "description": "Composer script copying your files after install",
+    "name": "gmdotnet/composer-copy-file",
+    "description": "Composer script copying your dirs and files after install or update ",
     "keywords": ["copy file"],
-    "homepage": "https://github.com/SlowProg/composer-copy-file",
+    "homepage": "https://github.com/gmdotnet/composer-copy-file",
     "license": "MIT",
     "authors": [
         {
             "name": "Andrey Tyshev",
             "email": "slowprog@gmail.com"
+        },
+        {
+            "name": "Giuseppe Morelli",
+            "email": "info@giuseppemorelli.net"
         }
     ],
     "require": {
@@ -21,6 +25,6 @@
         "mikey179/vfsStream": "~1"
     },
     "autoload": {
-        "psr-4": { "SlowProg\\CopyFile\\": "" }
+        "psr-4": { "GMdotnet\\CopyFile\\": "" }
     }
 }

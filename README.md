@@ -8,14 +8,14 @@ For example copy fonts:
 {
     "require":{
         "twbs/bootstrap": "~3.3",
-        "slowprog/composer-copy-file": "~0.2"
+        "gmdotnet/composer-copy-file": "~0.3"
     },
     "scripts": {
         "post-install-cmd": [
-            "SlowProg\\CopyFile\\ScriptHandler::copy"
+            "GMdotnet\\CopyFile\\ScriptHandler::copy"
         ],
         "post-update-cmd": [
-            "SlowProg\\CopyFile\\ScriptHandler::copy"
+            "GMdotnet\\CopyFile\\ScriptHandler::copy"
         ]
     },
     "extra": {
@@ -37,6 +37,7 @@ dir/
     subdir/
         file1.txt
         file2.txt
+        .filehidden
 ```
 
 1. Dir-to-dir:
@@ -58,6 +59,7 @@ dir/
         other/
             file1.txt
             file2.txt
+            .filehidden
     ```
 
 2. File-to-dir:
@@ -104,3 +106,7 @@ dir/
             file1.txt
             file_rename.txt
     ```
+    
+### Credits
+Thanks Slowprog for the base project - [https://github.com/slowprog](https://github.com/slowprog)  
+Giuseppe Morelli - [giuseppemorelli.net](https://www.giuseppemorelli.net) 
