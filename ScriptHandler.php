@@ -1,6 +1,6 @@
 <?php
 
-namespace SlowProg\CopyFile;
+namespace GMdotnet\CopyFile;
 
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Filesystem\Filesystem;
